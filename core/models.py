@@ -34,7 +34,7 @@ class Bebida(Base):
     tipo = models.CharField('Tipo', max_length=20, choices=TYPE_CHOICE)
 
 
-class Pìzza(Base):
+class Pizza(Base):
     TYPE_CHOICE = {
         (0, 'Doce'),
         (1, 'Salgado'),
