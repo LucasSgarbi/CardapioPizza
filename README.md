@@ -11,7 +11,6 @@ link: https://sqlitebrowser.org/dl/
 ### 3> git clone https://github.com/LucasSgarbi/CardapioPizza.git
 ### 4> cd CardapioPizza 
 ### 5> python -m venv .venv
-### 6> source .venv/bin/activate
-### 7> pip install -r requisitos.txt 
-### 8> python.exe .\manage.py runserver 
+### 6> pip install -r requisitos.txt 
+### 7> python.exe .\manage.py runserver 
 rodar o servidor
