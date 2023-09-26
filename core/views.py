@@ -1,7 +1,6 @@
 from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
 from django.contrib import messages
-from .models import Bebida
 
 
 class IndexView(TemplateView):
@@ -18,14 +17,14 @@ class BebidaView(TemplateView):
     success_url = reverse_lazy('bebida')
 
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
+        context = super(BebidaView, self).get_context_data(**kwargs)
         return context
 
 
 class SobreView(TemplateView):
-    template_name = 'Sobre.html'
+    template_name = 'sobre.html'
     success_url = reverse_lazy('sobre')
 
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
+        context = super(SobreView, self).get_context_data(**kwargs)
         return context

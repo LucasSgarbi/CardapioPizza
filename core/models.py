@@ -18,32 +18,23 @@ class Base(models.Model):
         abstract = True
 
 
-class Bebida(Base):
-    TYPE_CHOICE = {
-        ('vinho', 'Vinho'),
-        ('drink', 'Drink'),
-        ('cerveja', 'Cerveja'),
-        ('refrigerante', 'Refrigerante'),
-        ('suco', 'Suco'),
-    }
+class Categoria(Base):
+    tipo = models.CharField('Tipo', max_length=50)
+
+
+class Produto(Base):
     nome = models.CharField('Nome', max_length=50)
     preco = models.DecimalField('Preço', decimal_places=2, max_digits=5)
     descricao = models.TextField('Descrição', max_length=200)
     img = StdImageField('Imagem', upload_to=get_file_path,
                         variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
-    tipo = models.CharField('Tipo', max_length=20, choices=TYPE_CHOICE)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nome
 
 
-class Pizza(Base):
-    TYPE_CHOICE = {
-        (0, 'Doce'),
-        (1, 'Salgado'),
-    }
-    nome = models.CharField('Nome', max_length=40)
-    ingredientes = models.TextField('Ingredientes', max_length=300)
-    broto = models.DecimalField('Preço Broto', max_digits=3, decimal_places=2)
-    media = models.DecimalField('Preço Media', max_digits=3, decimal_places=2)
-    grande = models.DecimalField('Preço Grande', max_digits=3, decimal_places=2)
-    img = StdImageField('Imagem', upload_to=get_file_path,
-                        variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
-    salgado = models.BooleanField('Tipo', choices=TYPE_CHOICE)
+class Combo(Base):
+    nome = models.CharField('Nome', max_length=100)
+    pizza = models.ManyToManyField(Produto)
+    total = models.DecimalField('Preço', decimal_places=2, max_digits=5)
