@@ -37,4 +37,7 @@ class Produto(Base):
 class Combo(Base):
     nome = models.CharField('Nome', max_length=100)
     pizza = models.ManyToManyField(Produto)
+    img = StdImageField('Imagem', upload_to=get_file_path,
+                        variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
     total = models.DecimalField('Preço', decimal_places=2, max_digits=5)
+
