@@ -28,3 +28,12 @@ class SobreView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(SobreView, self).get_context_data(**kwargs)
         return context
+
+
+class RegisterView(TemplateView):
+    template_name = 'cadastro.html'
+    success_url = reverse_lazy('cadastro')
+
+    def get_context_data(self, **kwargs):
+        context = super(RegisterView, self).get_context_data(**kwargs)
+        return context
