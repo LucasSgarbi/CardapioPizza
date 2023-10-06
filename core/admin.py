@@ -16,3 +16,4 @@ class ProdutoAdmin(admin.ModelAdmin):
 class ComboAdmin(admin.ModelAdmin):
     list_display = ('nome', 'total')
 
+
