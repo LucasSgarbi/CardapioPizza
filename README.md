@@ -8,7 +8,7 @@ Projeto de Laboratório de Engenharia de Software utilizando linguagem utilizada
 link: https://www.python.org/downloads/ não esqueça na instalação adicionar o PATH
 ### 2> Instalar DB Browser
 link: https://sqlitebrowser.org/dl/
-### 3> git clone https://github.com/LucasSgarbi/CardapioPizza.git
+### 3> git clone https://github.com/LucasSgarbi/La-Peepo-Pizza
 ### 4> cd CardapioPizza 
 ### 5> python -m venv .venv
 ### 6> pip install -r requisitos.txt 
