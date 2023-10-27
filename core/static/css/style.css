@@ -1,3 +1,21 @@
+.carousel-item {
+    height: 32rem;
+    img:center;
+}
+
+.active {
+
+
+}
+
+.container {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-bottom:50px;
+}
+
 
 .pizza {
     background-image:url(../img/bg.jpg);
