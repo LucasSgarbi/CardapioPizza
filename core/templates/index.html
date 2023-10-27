@@ -4,14 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <title>La Peppo Pizza</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
 </head>
 <body>
-    <center><h1>Seja Bem-Vindo!</h1>
 
-    <img src="{% static 'lapeppopizza_logo.png' %}" alt="Avatar">
-    <link src="{% static 'css/style.css' %}>
-    >
+   <!--<img src="{% static 'lapeppopizza_banner.png' %}" alt="Avatar">--> 
+ 
+   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://media.istockphoto.com/id/1096974464/pt/foto/collage-of-various-types-of-pizza.jpg?s=170667a&w=0&k=20&c=1rcf7JU5nhNh3k_SeNO_P6SDN3hdDPxYpesaaOY7Hao="  alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>PIZZAS</h1>
+            <p>Encontre a sua dentre uma variedades de sabores!.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver Pizzas</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://media.istockphoto.com/id/1203052397/pt/foto/people-eating-various-pizzas-and-drinking-red-wine-wide-composition.jpg?s=170667a&w=0&k=20&c=jzcmunX9qrG8dfRV7Nc1ki1ymz5lK6Mix7AEAlkjnMk="  alt="...">
    
-</center>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Combos</h1>
+            <p>Diversas opções de combinações de sabores e com a sua bebida preferida!</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver Combos</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://conteudo.imguol.com.br/c/entretenimento/0c/2018/04/11/alcool-1523481658617_v2_615x300.jpg"  alt="...">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Bebidas</h1>
+            <p>Essencial para acompanhar a sua pizza, do jeito que você gosta</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver Bebidas</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  </div>
+   
+
 </body>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/javascript.js' %}"></script>
+
 </html>
