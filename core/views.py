@@ -13,6 +13,15 @@ class IndexView(TemplateView):
         return context
 
 
+class PizzaView(TemplateView):
+    template_name = 'pizza.html'
+    success_url = reverse_lazy('pizza')
+
+    def get_context_data(self, **kwargs):
+        context = super(PizzaView, self).get_context_data(**kwargs)
+        return context
+
+
 class BebidaView(TemplateView):
     template_name = 'bebida.html'
     success_url = reverse_lazy('bebida')
