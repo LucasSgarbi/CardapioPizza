@@ -26,3 +26,6 @@
 .bg_coco{
     background-color: #C0C0C0;
 }
+.img{
+    background-image: url( ../img/pizzamenu.jpg);
+}
