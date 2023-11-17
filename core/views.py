@@ -29,7 +29,8 @@ class BebidaView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(BebidaView, self).get_context_data(**kwargs)
-        context['bebidaA'] = Produto.objects.all().filter(categoria_id = 1)
+        context['bebidaNA'] = Produto.objects.all().filter(categoria_id = 3)
+        context['bebidaA'] = Produto.objects.all().filter(categoria_id=1)
         return context
 
 

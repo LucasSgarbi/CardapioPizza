@@ -45,16 +45,17 @@
     </div>
     <div class="container-fluid ">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            {% for BA in bebidaA %}
+            {% for BNA in bebidaNA %}
             <div class="col">
                 <div class="card h-100" >
-                    <img class="card-img-top" src="{{ BA.img.thumb.url }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ BNA.img.thumb.url }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">{{ BA.nome }}</h5>
-                        <p class="card-text">{{ BA.descricao }}</p>
+                        <h5 class="card-title">{{ BNA.nome }}</h5>
+                        <p class="card-text">{{ BNA.descricao }}</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Preço: {{ BA.preco }}</small>
+                        <small class="text-danger">Preço: {{ BNA.preco }} </small>
+                        <!--<a class="text-right" href="#">&#10010</a>-->
                     </div>
                 </div>
             </div>
@@ -68,18 +69,20 @@
     </div>
     <div class="container-fluid ">
         <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for BA in bebidaA %}
             <div class="col">
                 <div class="card h-100" >
-                    <img class="card-img-top" src="{% static 'img/test.png' %}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ BA.img.thumb.url }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">{{ BA.nome }}</h5>
+                        <p class="card-text">{{ BA.descricao }}</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                        <small class="text-danger">Preço: {{ BA.preco }}</small>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 

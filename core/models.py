@@ -30,7 +30,7 @@ class Produto(Base):
     preco = models.DecimalField('Preço', decimal_places=2, max_digits=5)
     descricao = models.TextField('Descrição', max_length=200)
     img = StdImageField('Imagem', upload_to=get_file_path,
-                        variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
+                        variations={'thumb': {'width': 480, 'height': 360, 'crop': True}})
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def __str__(self):
