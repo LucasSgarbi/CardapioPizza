@@ -11,6 +11,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+        context['titulo'] = 'Home'
         return context
 
 
@@ -20,6 +21,9 @@ class PizzaView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(PizzaView, self).get_context_data(**kwargs)
+        context['pizzaSalgada'] = Produto.objects.all().filter(categoria_id=2)
+        context['pizzaDoce'] = Produto.objects.all().filter(categoria_id=4)
+        context['titulo'] = 'Pizza'
         return context
 
 
@@ -29,8 +33,9 @@ class BebidaView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(BebidaView, self).get_context_data(**kwargs)
-        context['bebidaNA'] = Produto.objects.all().filter(categoria_id = 3)
+        context['bebidaNA'] = Produto.objects.all().filter(categoria_id=3)
         context['bebidaA'] = Produto.objects.all().filter(categoria_id=1)
+        context['titulo'] = 'Bebidas'
         return context
 
 
@@ -41,6 +46,7 @@ class SobreView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(SobreView, self).get_context_data(**kwargs)
+        context['titulo'] = 'Sobre'
         return context
 
     def form_valid(self, form, *args, **kwargs):
@@ -59,4 +65,5 @@ class RegisterView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(RegisterView, self).get_context_data(**kwargs)
+        context['titulo'] = 'Cadastro'
         return context
