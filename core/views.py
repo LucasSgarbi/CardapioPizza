@@ -2,6 +2,7 @@ from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .forms import ContatoForms
+from .models import Produto
 
 
 class IndexView(TemplateView):
@@ -28,6 +29,7 @@ class BebidaView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(BebidaView, self).get_context_data(**kwargs)
+        context['bebidaA'] = Produto.objects.all().filter(categoria_id = 1)
         return context
 
 
