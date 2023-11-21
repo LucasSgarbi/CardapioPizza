@@ -14,6 +14,9 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 @admin.register(Combo)
 class ComboAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'total')
+    list_display = ('nome', 'Produtos', 'total')
+
+    def Produtos(self, obj):
+        return ", ".join([cb.nome for cb in obj.produtos.all()])
 
 
