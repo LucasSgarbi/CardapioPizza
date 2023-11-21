@@ -2,7 +2,7 @@ from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .forms import ContatoForms
-from .models import Produto
+from .models import Produto, Combo
 
 
 class IndexView(TemplateView):
@@ -12,6 +12,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['titulo'] = 'Home'
+        context['combo'] = Combo.objects.all()
         return context
 
 
