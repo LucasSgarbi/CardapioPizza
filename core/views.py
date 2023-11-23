@@ -12,7 +12,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['titulo'] = 'Home'
-        context['combo'] = Combo.objects.all()
+        context['combo'] = Combo.objects.all().filter(ativo=1).order_by('total')
         return context
 
 
@@ -22,8 +22,8 @@ class PizzaView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(PizzaView, self).get_context_data(**kwargs)
-        context['pizzaSalgada'] = Produto.objects.all().filter(categoria_id=2)
-        context['pizzaDoce'] = Produto.objects.all().filter(categoria_id=4)
+        context['pizzaSalgada'] = Produto.objects.all().filter(categoria_id=2, ativo=1).order_by('preco')
+        context['pizzaDoce'] = Produto.objects.all().filter(categoria_id=4, ativo=1).order_by('preco')
         context['titulo'] = 'Pizza'
         return context
 
@@ -34,8 +34,8 @@ class BebidaView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(BebidaView, self).get_context_data(**kwargs)
-        context['bebidaNA'] = Produto.objects.all().filter(categoria_id=3)
-        context['bebidaA'] = Produto.objects.all().filter(categoria_id=1)
+        context['bebidaNA'] = Produto.objects.all().filter(categoria_id=3, ativo=1)
+        context['bebidaA'] = Produto.objects.all().filter(categoria_id=1, ativo=1)
         context['titulo'] = 'Bebidas'
         return context
 
