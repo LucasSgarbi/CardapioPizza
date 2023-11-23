@@ -1,27 +1,12 @@
-<!--{% load static %}-->
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - LaPeppoPizza</title>
-    <!-- Bootstrap CSS 
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >-->
-    <link rel="stylesheet" href="../static/css/style.css" >
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css" >
-
-
-</head>
-
+{% include 'base.html' %}
+{% load static %}
 
 <body >
   <div class="container-sm  text-center" >
-    <!-- <img src="{% static 'img/local.jpg' %}" class="img-fluid" alt="..."> -->
+
     <h1> A Empresa</h1>
 
-    <img src="../static/img/local.jpg" class="img-fluid" alt="Fachada LaPeppoPizza" style="margin-top: px; margin-bottom: 20px;"><br>
+    <img src="{% static 'img/local.jpg' %}" class="img-fluid" alt="Fachada LaPeppoPizza" style="margin-top: px; margin-bottom: 20px;"><br>
 
     <h3>Bem-vindo à La Peppo Pizza - Uma Tradição que Começou em 1960!</h3>
     <p class="paragrafo_sobre">Fundada em 1960, a La Peppo Pizza é uma renomada rede de pizzarias que se orgulha de oferecer uma experiência gastronômica única em todo o mundo. Com uma trajetória de mais de seis décadas, nos tornamos sinônimo de qualidade, sabor autêntico e tradição familiar.</p>
@@ -59,9 +44,8 @@
         <div class="row contact-form-area input-group ">
           <div class="col-lg-7 col-md-12 col-sm-12">
             <div class="contact-block">
-              <!-- <form id="contato" method="post" action="{% url 'sobre' %}"> -->
-                <form id="contato" method="post" action="#"></form>
-                <!-- {% csrf_token %} -->
+              <form id="contato" method="post" action="{% url 'sobre' %}">
+                {% csrf_token %}
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group">
@@ -110,8 +94,5 @@
       </div>
     </section>
 </div>
-</body>
-    <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
-    <script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/javascript.js"></script>
-</html>
+
+{% include 'footer.html' %}
