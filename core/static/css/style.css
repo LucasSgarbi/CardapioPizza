@@ -26,6 +26,18 @@
 .bg_coco{
     background-color: #C0C0C0;
 }
+
 .img{
-    background-image: url( ../img/pizzamenu.jpg);
+    opacity: 0.5px;  
+}
+
+.overlay-image {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 10;
 }
