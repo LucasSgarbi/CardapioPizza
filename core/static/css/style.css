@@ -42,3 +42,7 @@
 .paragrafo_sobre {
     color: black;;
 }
+
+a{
+    text-decoration: none;
+}

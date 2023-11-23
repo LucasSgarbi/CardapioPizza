@@ -31,10 +31,16 @@
             <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
           </li>
         </ul>
+        {% if user.is_anonymous %}
         <form class="d-flex">
-
-          <a href="http://127.0.0.1:8000/admin" class="btn btn-primary" type="button">Login</a>
+          <a href="{% url 'login' %}" class="btn btn-primary" type="button">Login</a>
         </form>
+        {%else %}
+        <form class="d-flex">
+          <p class="text-danger">Ola {{ user.username }} </p>
+          <a href="{% url 'logout' %}" class="btn btn-primary" type="button">Logout</a>
+        </form>
+        {%endif%}
       </div>
     </div>
   </nav>

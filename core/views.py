@@ -68,3 +68,7 @@ class RegisterView(TemplateView):
         context = super(RegisterView, self).get_context_data(**kwargs)
         context['titulo'] = 'Cadastro'
         return context
+
+
+class LoginView(TemplateView):
+    template_name = 'login.html'
