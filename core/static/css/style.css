@@ -23,9 +23,7 @@
 .pizza {
     background-image:url(../img/bg.jpg);
 }
-.bg_coco{
-    background-color: #C0C0C0;
-}
+
 
 .img{
     opacity: 0.5px;  
@@ -40,4 +38,8 @@
     background-position: center;
     background-size: cover;
     opacity: 10;
+}
+
+.paragrafo_sobre {
+    color: black;;
 }

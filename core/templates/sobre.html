@@ -1,4 +1,4 @@
-{% load static %}
+<!--{% load static %}-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,45 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - LaPeppoPizza</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS 
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >-->
+    <link rel="stylesheet" href="../static/css/style.css" >
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" >
 
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-success container-fluid">
-  <a class="navbar-brand" href="{% url 'index' %}">LaPeppoPizza</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'pizza' %}">Pizza</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'bebida' %}">Bebidas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
-      </li>
-    </ul>
-  </div>
-</nav>
 
-<body class="bg_coco">
-  <div class="container-sm bg-secondary text-center">
-    <img src="{% static 'img/local.jpg' %}" class="img-fluid" alt="...">
-    <p>De uma pizzaria local, em 1960, à maior rede de pizzarias do mundo: a La Peppo Pizza está presente hoje em algumas cidades. No Brasil, desembarcamos em 1993, inaugurando uma unidade em Jaboticabal. Ao longo desses anos, investimos em tecnologia e delivery para melhorar a experiência dos amantes de pizza. </p>
-    <p>*Preços "a partir de" podem sofrer pequenas variações de acordo com a região da loja. Confirme o preço no carrinho de compras antes de confirmar seu pedido.</p>
-    <p>La Peppo pizza, Av. das Américas, 497 -Taquaritinga - 15900-005</p>
+<body >
+  <div class="container-sm  text-center" >
+    <!-- <img src="{% static 'img/local.jpg' %}" class="img-fluid" alt="..."> -->
+    <h1> A Empresa</h1>
+
+    <img src="../static/img/local.jpg" class="img-fluid" alt="Fachada LaPeppoPizza" style="margin-top: px; margin-bottom: 20px;"><br>
+
+    <h3>Bem-vindo à La Peppo Pizza - Uma Tradição que Começou em 1960!</h3>
+    <p class="paragrafo_sobre">Fundada em 1960, a La Peppo Pizza é uma renomada rede de pizzarias que se orgulha de oferecer uma experiência gastronômica única em todo o mundo. Com uma trajetória de mais de seis décadas, nos tornamos sinônimo de qualidade, sabor autêntico e tradição familiar.</p>
+
+  <p class="paragrafo_sobre"> Desde o início, a La Peppo Pizza se dedicou a criar pizzas excepcionais, utilizando ingredientes frescos e autênticos métodos de preparo. Com um compromisso inabalável com a qualidade, expandimos nossa presença global, conquistando paladares em diversos países.
+
+   Embora tenhamos percorrido um longo caminho desde 1960, nossa história no Brasil começou mais recentemente, em 1993. Desde então, a La Peppo Pizza tem encantado os brasileiros com suas receitas originais, mantendo a tradição que nos tornou uma referência mundial em pizzas de alta qualidade.
+
+  Nossas filiais no Brasil são uma extensão do legado que começou há mais de meio século. Cada pizza que servimos é uma celebração da paixão e dedicação que dedicamos a esse ofício ao longo dos anos. Estamos comprometidos em oferecer não apenas uma refeição deliciosa, mas uma experiência que reflete a autenticidade e a excelência que nos definem.</p>
+
+  <p class="paragrafo_sobre">Ao escolher La Peppo Pizza, você está escolhendo mais do que uma simples refeição; está optando por uma tradição que ultrapassa fronteiras e transcende o tempo. Agradecemos por fazer parte da nossa jornada e mal podemos esperar para compartilhar o sabor atemporal de La Peppo Pizza com você. Venha se deliciar conosco e faça parte da nossa história!</p>
+
+    
+   
+
+    <adress>
+      <strong><h2>La Peppo Pizza</h2></strong><br>
+      <h3>Endereço</h3>
+        <p style="font-size:18px">Centro Empresarial Fênix<br>
+        Rua 13 de Maio, 2100<br>
+        Sala 1205<br>
+        Taquaritinga-SP</p>
+      </adress>
+
+    
     <br>
   </div>
-  <div class="container-fluid bg-secondary ">
+  <div class="container-fluid  ">
     <section id="contact" class="section-padding ">
       <div>
         <div class="section-header text-center">
@@ -54,8 +59,9 @@
         <div class="row contact-form-area input-group ">
           <div class="col-lg-7 col-md-12 col-sm-12">
             <div class="contact-block">
-              <form id="contato" method="post" action="{% url 'sobre' %}">
-                {% csrf_token %}
+              <!-- <form id="contato" method="post" action="{% url 'sobre' %}"> -->
+                <form id="contato" method="post" action="#"></form>
+                <!-- {% csrf_token %} -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group">
@@ -81,12 +87,12 @@
                   </div>
                   <div class="col-md-12">
                     <div class="input-group">
-                      <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="7" data-error="Escreva sua mensagem" required></textarea>
+                      <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Escreva aqui sua dúvida, elogio ou sugestão." rows="7" data-error="Escreva sua mensagem" required></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="submit-button text-left">
                       <br>
-                      <button class="btn btn-danger" id="form-submit" type="submit">Enviar Mensagem</button>
+                      <button class="btn btn-success" id="form-submit" type="submit">Enviar Mensagem</button>
                       <div id="msgSubmit" class="h3 text-center hidden"></div>
                       <div class="clearfix"></div>
                     </div>
@@ -105,5 +111,7 @@
     </section>
 </div>
 </body>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/javascript.js"></script>
 </html>
